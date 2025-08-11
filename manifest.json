@@ -7,8 +7,7 @@
     "service_worker": "src/background/service-worker.js"
   },
   "action": {
-    "default_popup": "src/popup/popup.html",
-    "default_title": "RLVR Language Gym"
+    "default_title": "RLVR Hawaiian Subtitles"
   },
   "content_scripts": [
     {

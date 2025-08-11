@@ -1,16 +1,17 @@
 // RLVR Simple Hawaiian Overlay - ONE BUTTON ONLY
 class SimpleHawaiianOverlay {
     constructor() {
+        // DEFINITIVE Hawaiian-English translations from "Chief of War" - DO NOT MODIFY
         this.hawaiianSubtitles = [
-            { time: "21:38-21:41", start: 1318, end: 1321, hawaiian: "I mea aha kou ki'i 'ana mai iā mākou?", english: "What does it mean that you are showing us (your image)?" },
-            { time: "21:43-21:44", start: 1323, end: 1324, hawaiian: "Kū a'ela ka pu'u make no ke aupuni o mākou.", english: "The deadly hill rose up for our kingdom." },
-            { time: "21:47-21:49", start: 1327, end: 1329, hawaiian: "Wānana maila nā kāula o mākou", english: "Then our stars foretold (our seers foresaw)." },
-            { time: "21:50-21:53", start: 1330, end: 1333, hawaiian: "i ka ho'okauā 'ia ihola o ko mākou po'e", english: "When our people were finally summoned downward." },
-            { time: "21:54-21:55", start: 1334, end: 1335, hawaiian: "ma lalo o ka noho ali'i o O'ahu.", english: "Below the royal seat of O'ahu." },
-            { time: "21:58-22:03", start: 1338, end: 1343, hawaiian: "A wahi a nā kiu, pālua paha ko lākou pū'ali koa i ko mākou.", english: "And according to the chiefs, their army may have been twice ours." },
-            { time: "22:05-22:08", start: 1345, end: 1348, hawaiian: "No ke aha e holo mai ai ko O'ahu e kaua mai iā 'oukou?", english: "Why is it that O'ahu is coming to wage war against you?" },
-            { time: "22:10-22:12", start: 1350, end: 1352, hawaiian: "He 'ōpio ka mō'ī, 'o Hahana.", english: "The king is young—it is Hahana." },
-            { time: "22:13-22:16", start: 1353, end: 1356, hawaiian: "Ua kūpa'a mau 'o ia ma hope o ka Mō'ī Kahekili.", english: "He has remained steadfast following King Kahekili." },
+            { time: "21:38-21:41", start: 1318, end: 1321, hawaiian: "I mea aha kou kiʻi ʻana mai iā mākou?", english: "What does it mean that you are showing us (your image)?" },
+            { time: "21:43-21:44", start: 1323, end: 1324, hawaiian: "Kū aʻe ka puʻu make no ke aupuni o mākou.", english: "The deadly hill rose up for our kingdom." },
+            { time: "21:47-21:49", start: 1327, end: 1329, hawaiian: "Wānana maila nā kāula o mākou", english: "Then our stars foretold (our seers foresaw)" },
+            { time: "21:50-21:53", start: 1330, end: 1333, hawaiian: "i ka hoʻokauā ʻia ihola o ko mākou poʻe", english: "When our people were finally summoned downward" },
+            { time: "21:54-21:55", start: 1334, end: 1335, hawaiian: "ma lalo o ka noho aliʻi o Oʻahu.", english: "Below the royal seat of Oʻahu." },
+            { time: "21:58-22:03", start: 1338, end: 1343, hawaiian: "A wahi a nā kiu, pālua paha ko lākou pūʻali koa i ko mākou.", english: "And according to the chiefs, their army may have been twice ours." },
+            { time: "22:05-22:08", start: 1345, end: 1348, hawaiian: "No ke aha e holo mai ai ko Oʻahu e kaua mai iā ʻoukou?", english: "Why is it that Oʻahu is coming to wage war against you?" },
+            { time: "22:10-22:12", start: 1350, end: 1352, hawaiian: "He ʻōpio ka mōʻī, ʻo Hahana.", english: "The king is young—it is Hahana." },
+            { time: "22:13-22:16", start: 1353, end: 1356, hawaiian: "Ua kūpaʻa mau ʻo ia ma hope o ka Mōʻī Kahekili.", english: "He has remained steadfast following King Kahekili." },
             { time: "22:17-22:20", start: 1357, end: 1360, hawaiian: "A ua waiho wale akula ko Maui i ko ia ala aupuni.", english: "And Maui abandoned his throne on that course of rule." }
         ];
         
@@ -24,59 +25,34 @@ class SimpleHawaiianOverlay {
     init() {
         this.findVideo();
         this.createSubtitleOverlay();
-        this.createButton();
         this.startTracking();
         this.setupMessageListener();
-        console.log('🌺 Simple Hawaiian overlay ready');
+        console.log('🌺 Hawaiian subtitle overlay ready');
     }
     
     findVideo() {
-        // Find video on Apple TV page
+        // ONLY activate on Chief of War Apple TV page
+        const expectedUrl = 'https://tv.apple.com/us/show/chief-of-war/umc.cmc.6ag0zq020ielwv7m83v8r4dkw';
+        if (!window.location.href.includes('chief-of-war/umc.cmc.6ag0zq020ielwv7m83v8r4dkw')) {
+            console.log('🌺 Not on Chief of War page, overlay disabled');
+            return;
+        }
+        
+        // Find video on Apple TV Chief of War page
         this.video = document.querySelector('video');
         if (!this.video) {
             // Try again after a delay for Apple TV
             setTimeout(() => {
                 this.video = document.querySelector('video');
                 if (this.video) {
-                    console.log('🎥 Apple TV video found');
+                    console.log('🎥 Chief of War video found - Hawaiian overlay active');
                 }
             }, 2000);
+        } else {
+            console.log('🎥 Chief of War video found - Hawaiian overlay active');
         }
     }
     
-    createButton() {
-        // Remove any existing button
-        const existing = document.getElementById('hawaiian-explain-btn');
-        if (existing) existing.remove();
-        
-        // Create ONE simple button
-        this.button = document.createElement('button');
-        this.button.id = 'hawaiian-explain-btn';
-        this.button.textContent = 'Translate';
-        this.button.style.cssText = `
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 999999;
-            padding: 8px 16px;
-            background: #3b82f6;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            display: none;
-        `;
-        
-        // Click handler - just show simple translation
-        this.button.addEventListener('click', () => {
-            this.showTranslation();
-        });
-        
-        document.body.appendChild(this.button);
-    }
     
     createSubtitleOverlay() {
         // Remove any existing overlay
@@ -101,7 +77,6 @@ class SimpleHawaiianOverlay {
         this.subtitleOverlay.innerHTML = `
             <div id="hawaiian-line" class="line">
                 <div id="hawaiian-text"></div>
-                <div id="english-text"></div>
             </div>
         `;
         
@@ -121,30 +96,25 @@ class SimpleHawaiianOverlay {
             }
 
             #hawaiian-line.line {
-                font-size: clamp(16px, 3.2vw, 34px);
-                line-height: 1.35;
+                font-size: clamp(18px, 3.5vw, 36px);
+                line-height: 1.4;
                 color: #fff;
-                text-shadow: 0 0 3px #000, 0 0 6px #000;
-                background: rgba(0,0,0,0.25);
-                border-radius: 6px;
-                padding: .25em .5em;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+                background: rgba(0,0,0,0.7);
+                border-radius: 8px;
+                padding: 12px 20px;
                 margin-bottom: 3%;
-                max-width: 80%;
+                max-width: 85%;
                 word-wrap: break-word;
                 position: relative;
+                backdrop-filter: blur(4px);
+                border: 1px solid rgba(255,255,255,0.1);
             }
 
             #hawaiian-text {
-                font-weight: bold;
-                margin-bottom: 4px;
-                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            }
-
-            #english-text {
-                font-size: 0.8em;
-                color: #cccccc;
-                font-weight: 400;
-                font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+                font-weight: 600;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                text-align: center;
             }
 
             /* RLVR branding */
@@ -166,27 +136,28 @@ class SimpleHawaiianOverlay {
     }
     
     startTracking() {
+        // FASTEST METHOD: Direct video.currentTime access every 100ms
         setInterval(() => {
-            if (this.video) {
-                const currentTime = Math.floor(this.video.currentTime);
+            // Get video element directly - works on ALL streaming sites
+            const video = document.querySelector('video');
+            if (video && !video.paused) {
+                const currentTime = Math.floor(video.currentTime);
+                
+                // Match against our Hawaiian subtitles
                 const subtitle = this.hawaiianSubtitles.find(sub => 
                     currentTime >= sub.start && currentTime <= sub.end
                 );
                 
-                if (subtitle) {
-                    if (subtitle !== this.currentSub) {
-                        this.currentSub = subtitle;
-                        this.updateSubtitleDisplay(subtitle);
-                        this.button.style.display = 'block';
-                        this.button.textContent = `${subtitle.time}`;
-                    }
-                } else {
+                if (subtitle && subtitle !== this.currentSub) {
+                    this.currentSub = subtitle;
+                    this.updateSubtitleDisplay(subtitle);
+                    console.log(`🌺 Video at ${currentTime}s - Showing: ${subtitle.time}`);
+                } else if (!subtitle && this.currentSub) {
                     this.hideSubtitleDisplay();
-                    this.button.style.display = 'none';
                     this.currentSub = null;
                 }
             }
-        }, 100);
+        }, 100); // 100ms = fast and efficient
     }
     
     updateSubtitleDisplay(subtitle) {
@@ -194,9 +165,9 @@ class SimpleHawaiianOverlay {
         const englishEl = document.getElementById('english-text');
         
         if (hawaiianEl && englishEl) {
-            hawaiianEl.textContent = subtitle.hawaiian;
-            englishEl.textContent = subtitle.english;
+            hawaiianEl.innerHTML = `${subtitle.hawaiian}<br><span style="color: #cccccc; font-size: 0.85em;">${subtitle.english}</span>`;
             this.subtitleOverlay.style.display = 'block';
+            this.subtitleOverlay.style.opacity = '1';
         }
     }
     
@@ -223,50 +194,37 @@ class SimpleHawaiianOverlay {
         });
     }
     
-    showTranslation() {
-        if (!this.currentSub) return;
-        
-        // Remove existing popup
-        const existing = document.getElementById('hawaiian-popup');
-        if (existing) existing.remove();
-        
-        // Create simple translation popup
-        const popup = document.createElement('div');
-        popup.id = 'hawaiian-popup';
-        popup.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000000;
-            background: rgba(0,0,0,0.9);
-            color: white;
-            padding: 16px;
-            border-radius: 8px;
-            max-width: 320px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.5);
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            border: 2px solid #3b82f6;
-        `;
-        
-        popup.innerHTML = `
-            <div style="text-align: right; margin-bottom: 12px;">
-                <span style="color: #3b82f6; font-size: 12px; font-weight: 600;">${this.currentSub.time}</span>
-                <button onclick="this.parentElement.parentElement.remove()" style="background: none; border: none; color: white; font-size: 16px; cursor: pointer; margin-left: 8px;">✕</button>
-            </div>
-            <div style="margin-bottom: 12px;">
-                <div style="font-size: 16px; font-weight: 500; margin-bottom: 6px;">${this.currentSub.hawaiian}</div>
-                <div style="font-size: 14px; color: #ccc;">${this.currentSub.english}</div>
-            </div>
-        `;
-        
-        document.body.appendChild(popup);
-        
-        // Auto-close after 5 seconds
-        setTimeout(() => {
-            if (popup.parentNode) popup.remove();
-        }, 5000);
-    }
 }
 
-// Start simple overlay
-new SimpleHawaiianOverlay();
+// Initialize ONLY on Chief of War Apple TV page
+const chiefOfWarUrl = 'chief-of-war/umc.cmc.6ag0zq020ielwv7m83v8r4dkw';
+
+if (window.location.href.includes(chiefOfWarUrl)) {
+    let overlay = null;
+    
+    function initOverlay() {
+        if (!overlay) {
+            overlay = new SimpleHawaiianOverlay();
+        }
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initOverlay);
+    } else {
+        initOverlay();
+    }
+    
+    // Reinitialize if user navigates within the show
+    let lastUrl = window.location.href;
+    setInterval(() => {
+        if (window.location.href !== lastUrl && window.location.href.includes(chiefOfWarUrl)) {
+            lastUrl = window.location.href;
+            console.log('🌺 Navigation detected - reinitializing overlay');
+            if (overlay) {
+                overlay.findVideo(); // Refresh video element
+            }
+        }
+    }, 1000);
+} else {
+    console.log('🌺 Hawaiian overlay only active on Chief of War episodes');
+}

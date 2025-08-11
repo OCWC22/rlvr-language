@@ -9,7 +9,7 @@
       "context": "Aloha kakahiaka! How are you today?",
       "translation": "Good morning! How are you today?",
       "timestamp": "00:36-00:39",
-      "source": "Netflix",
+      "source": "Apple TV",
       "ai_explanation": "Aloha is a Hawaiian word that means both hello and goodbye, but it carries much deeper meaning. It represents love, peace, and compassion - the spirit of living in harmony with others and nature."
     },
     "mahalo": {
@@ -21,7 +21,7 @@
       "context": "Mahalo for your help today",
       "translation": "Thank you for your help today",
       "timestamp": "01:15-01:18",
-      "source": "Netflix"
+      "source": "Apple TV"
     },
     "ohana": {
       "hawaiian": "Ohana",
@@ -32,7 +32,7 @@
       "context": "Ohana means family, and family means nobody gets left behind",
       "translation": "Family means family, and family means nobody gets left behind",
       "timestamp": "02:20-02:25",
-      "source": "Netflix"
+      "source": "Apple TV"
     }
   },
   "progress": {
