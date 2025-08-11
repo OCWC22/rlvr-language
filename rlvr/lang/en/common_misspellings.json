@@ -1,0 +1,50 @@
+{
+  "common_errors": {
+    "teh": "the",
+    "recieve": "receive",
+    "beleive": "believe",
+    "seperate": "separate",
+    "occured": "occurred",
+    "untill": "until",
+    "wich": "which",
+    "definately": "definitely",
+    "accomodate": "accommodate",
+    "embarass": "embarrass",
+    "occassion": "occasion",
+    "neccessary": "necessary",
+    "possesion": "possession",
+    "independant": "independent",
+    "existance": "existence",
+    "experiance": "experience",
+    "probaly": "probably",
+    "realy": "really",
+    "wierd": "weird",
+    "freind": "friend",
+    "finaly": "finally",
+    "begining": "beginning"
+  },
+  "homophones": {
+    "there_their_theyre": {
+      "there": "location or existence",
+      "their": "possession",
+      "they're": "they are"
+    },
+    "your_youre": {
+      "your": "possession",
+      "you're": "you are"
+    },
+    "its_its": {
+      "its": "possession",
+      "it's": "it is"
+    },
+    "to_too_two": {
+      "to": "direction or infinitive",
+      "too": "also or excessive",
+      "two": "number 2"
+    },
+    "then_than": {
+      "then": "time",
+      "than": "comparison"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "rlvr",
+  "version": "0.1.0",
+  "description": "Reinforcement Learning with Verifiable Rewards for Language Learning",
+  "scripts": {
+    "install-python": "pip install -r requirements.txt",
+    "dev": "uvicorn rlvr.server.api:app --reload",
+    "gym": "python -m rlvr.gym.run --lang haw --dataset gym/datasets/dev.jsonl --k 12",
+    "test": "pytest",
+    "format": "black . && isort ."
+  },
+  "keywords": [
+    "rlvr",
+    "translation",
+    "language-learning",
+    "reinforcement-learning"
+  ],
+  "author": "RLVR Team",
+  "license": "MIT"
+}

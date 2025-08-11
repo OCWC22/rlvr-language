@@ -1,0 +1,74 @@
+{
+  "be": {
+    "base": "be",
+    "past_singular": "was",
+    "past_plural": "were",
+    "past_participle": "been",
+    "present_first": "am",
+    "present_third": "is",
+    "present_plural": "are"
+  },
+  "have": {
+    "base": "have",
+    "past": "had",
+    "past_participle": "had",
+    "present_third": "has",
+    "present_plural": "have"
+  },
+  "do": {
+    "base": "do",
+    "past": "did",
+    "past_participle": "done",
+    "present_third": "does",
+    "present_plural": "do"
+  },
+  "go": {
+    "base": "go",
+    "past": "went",
+    "past_participle": "gone",
+    "present_third": "goes",
+    "present_plural": "go"
+  },
+  "get": {
+    "base": "get",
+    "past": "got",
+    "past_participle": "gotten",
+    "present_third": "gets",
+    "present_plural": "get"
+  },
+  "make": {
+    "base": "make",
+    "past": "made",
+    "past_participle": "made",
+    "present_third": "makes",
+    "present_plural": "make"
+  },
+  "take": {
+    "base": "take",
+    "past": "took",
+    "past_participle": "taken",
+    "present_third": "takes",
+    "present_plural": "take"
+  },
+  "come": {
+    "base": "come",
+    "past": "came",
+    "past_participle": "come",
+    "present_third": "comes",
+    "present_plural": "come"
+  },
+  "see": {
+    "base": "see",
+    "past": "saw",
+    "past_participle": "seen",
+    "present_third": "sees",
+    "present_plural": "see"
+  },
+  "give": {
+    "base": "give",
+    "past": "gave",
+    "past_participle": "given",
+    "present_third": "gives",
+    "present_plural": "give"
+  }
+}

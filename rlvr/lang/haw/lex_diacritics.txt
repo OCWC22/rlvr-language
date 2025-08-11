@@ -1,0 +1,72 @@
+# Hawaiian words requiring ʻokina (ʻ) and/or kahakō (macrons)
+# Format: one word per line with correct diacritics
+
+# Common words with ʻokina
+ʻae
+ʻaʻole
+ʻāina
+ʻaumākua
+ʻoe
+ʻo
+ʻekahi
+ʻelua
+ʻekolu
+ʻehā
+ʻelima
+ʻeono
+ʻehiku
+ʻewalu
+ʻeiwa
+ʻohana
+ʻōlelo
+ʻono
+ʻukulele
+ʻumi
+
+# Common words with kahakō
+aloha
+hālāwai
+hāʻawi
+hōʻike
+kākou
+kālā
+kāne
+kōkua
+kūpuna
+lāʻau
+mākaʻi
+mālama
+nānā
+pāʻani
+pōpoki
+pūʻolo
+wāhine
+
+# Common words with both
+Hawaiʻi
+Kauaʻi
+Lānaʻi
+Molokaʻi
+Oʻahu
+hoʻomaikaʻi
+kaʻaʻawa
+kēhau
+kūʻai
+māʻona
+nāʻauao
+pāʻina
+pūʻali
+
+# Place names
+Waikīkī
+Mānoa
+Kāneʻohe
+Kailua
+Haleʻiwa
+Līhuʻe
+
+# Common expressions
+e komo mai
+mahalo nui loa
+a hui hou
+mele kalikimaka 
