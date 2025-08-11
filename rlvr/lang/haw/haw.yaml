@@ -1,0 +1,36 @@
+code: haw
+name: Hawaiian
+tokenizer: "basic" # or custom rules
+metrics:
+  - name: diacritics
+    module: rlvr.metrics.diacritics
+  - name: tam_particles
+    module: rlvr.metrics.tam_particles
+  - name: articles_ke_ka
+    module: rlvr.metrics.articles_ke_ka
+weights:
+  diacritics: 0.4
+  tam_particles: 0.4
+  articles_ke_ka: 0.2
+resources:
+  lex_diacritics: lang/haw/lex_diacritics.txt
+  ke_exceptions: lang/haw/ke_exceptions.txt
+  tam_regex: lang/haw/regex_tam.json
+generator:
+  kind: "llm"
+  params:
+    temperature: 0.9
+    top_p: 0.95
+    k_samples: 12
+    prompt_template: |
+      Translate to Hawaiian with correct diacritics (ʻokina and kahakō), valid TAM particles after ʻAʻole,
+      and correct ke/ka articles. 
+
+      Key rules:
+      - Use ʻokina (ʻ) and kahakō (macrons: ā, ē, ī, ō, ū) where required
+      - After ʻAʻole (not), use "i" or "e" particles, never "ua"
+      - Use "ke" before words starting with K, E, A, O (with exceptions)
+      - Use "ka" for all other cases
+
+      Input: "{src}"
+      Hawaiian:

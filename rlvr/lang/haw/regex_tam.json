@@ -1,0 +1,29 @@
+{
+  "neg": {
+    "marker": "ʻ[Aa]ʻole",
+    "valid": [
+      "\\bi\\s+VERB",
+      "\\be\\s+VERB\\s+(ana|nei)",
+      "\\bʻaʻole\\s+i\\s+VERB",
+      "\\bʻaʻole\\s+e\\s+VERB\\s+(ana|nei)"
+    ],
+    "invalid": ["\\bʻ[Aa]ʻole\\s+ua\\b", "\\bʻ[Aa]ʻole\\s+ke\\s+VERB\\s+nei\\b"]
+  },
+  "aff": {
+    "valid": [
+      "\\bua\\s+VERB",
+      "\\bke\\s+VERB\\s+nei",
+      "\\be\\s+VERB\\s+ana",
+      "\\be\\s+VERB\\s+ai",
+      "\\bmakemake\\s+e\\s+VERB"
+    ]
+  },
+  "verb_pattern": "[A-Za-zāēīōūĀĒĪŌŪ][a-zāēīōū]*",
+  "tam_particles": {
+    "ua": "perfective (completed action)",
+    "e_ana": "progressive (ongoing action)",
+    "ke_nei": "present progressive",
+    "i": "past tense marker (in negatives)",
+    "e": "imperative/future marker"
+  }
+}

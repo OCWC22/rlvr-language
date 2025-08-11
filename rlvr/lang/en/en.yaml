@@ -1,0 +1,52 @@
+code: en
+name: English
+direction: target # This is a target language for Hawaiian->English translation
+tokenizer: "basic"
+
+# Metrics for evaluating English output quality
+metrics:
+  - name: articles_a_an
+    module: rlvr.metrics.english_articles
+  - name: subject_verb_agreement
+    module: rlvr.metrics.english_subject_verb
+  - name: spelling
+    module: rlvr.metrics.english_spelling
+  - name: punctuation
+    module: rlvr.metrics.english_punctuation
+
+# Weights for combining metrics
+weights:
+  articles_a_an: 0.2
+  subject_verb_agreement: 0.3
+  spelling: 0.3
+  punctuation: 0.2
+
+# Language-specific resources
+resources:
+  article_exceptions: lang/en/article_exceptions.txt
+  common_misspellings: lang/en/common_misspellings.json
+  irregular_verbs: lang/en/irregular_verbs.json
+
+# Generator configuration for Hawaiian → English
+generator:
+  kind: "llm"
+  params:
+    temperature: 0.7 # Lower than Hawaiian for more consistency
+    top_p: 0.9
+    k_samples: 8
+    max_tokens: 150
+
+    prompt_template: |
+      You are an expert translator specializing in Hawaiian to English translation.
+      Translate the following Hawaiian text into natural, grammatically correct English.
+
+      Important guidelines:
+      - Preserve the original meaning and cultural context
+      - Use proper English grammar, spelling, and punctuation  
+      - Make it sound natural to English speakers
+      - If a Hawaiian word has no direct translation, provide the closest meaning
+      - Ensure proper use of "a" vs "an" articles
+      - Maintain subject-verb agreement
+
+      Hawaiian: "{src}"
+      English:

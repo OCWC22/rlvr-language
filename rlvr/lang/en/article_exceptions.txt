@@ -1,0 +1,38 @@
+# Words that start with vowel sounds but use "a"
+unicorn
+university
+union
+uniform
+unit
+united
+unique
+universal
+useful
+usual
+useless
+user
+utility
+
+# Words that start with consonants but use "an"
+hour
+honor
+honour
+honest
+honesty
+heir
+heirloom
+
+# Acronyms that use "an" (pronounced with vowel sound)
+FBI
+MBA
+LCD
+LED
+MRI
+NGO
+SUV
+
+# Acronyms that use "a" (pronounced with consonant sound)
+UFO
+NATO
+JPEG
+SCUBA 

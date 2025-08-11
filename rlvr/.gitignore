@@ -1,0 +1,78 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# RLVR specific
+audit/runs/
+gym/runs/
+*.jsonl
+
+test_showcase_demo.py
+showcase_demo_api_examples.json
+*showcase*
+*demo*
+
+
+# Generated gym files with hardcoded data
+hawaiian_english_gym_*.json
+run_gym_*.py
+my_hawaiian.jsonl
+
+# Test and debug scripts
+test_haw_to_en_api.py
+test_hawaiian_to_english.py
+analyze_hawaiian_phrase.py
+translate_hawaiian.py
+debug_*.py
+comprehensive_demo.py
+
+# Server logs and runtime files
+server.log 
