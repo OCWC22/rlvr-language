@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "RLVR Language Gym",
+  "version": "1.0.0",
+  "description": "Fast, situational language learning from your own media - YouTube transcripts, spaced repetition, and AI-powered language acquisition",
+  "background": {
+    "service_worker": "src/background/service-worker.js"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "RLVR Language Gym"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://youtu.be/*", "https://tv.apple.com/*", "https://www.apple.com/apple-tv-plus/*"],
+      "js": ["src/content/content.js", "src/content/simple-overlay.js"],
+      "css": ["src/styles.css", "src/styles/context-panel.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "identity",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtu.be/*",
+    "https://tv.apple.com/*",
+    "https://www.apple.com/*",
+    "https://generativelanguage.googleapis.com/*",
+    "http://localhost:8000/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  }
+}
