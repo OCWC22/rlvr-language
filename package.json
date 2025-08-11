@@ -1,0 +1,15 @@
+{
+  "name": "rlvr-language-gym",
+  "version": "1.0.0",
+  "description": "Chrome Extension for language learning through YouTube transcripts",
+  "main": "main.js",
+  "scripts": {
+    "clean": "rm -rf dist && mkdir -p dist",
+    "build": "npm run clean && cp -r src/* dist/ && cp manifest.json dist/",
+    "dev": "npm run build && echo '\n✅ Extension built! Load dist/ folder in Chrome Extensions'",
+    "test": "echo 'No tests configured yet'"
+  },
+  "keywords": ["language-learning", "chrome-extension", "youtube", "transcripts"],
+  "author": "RLVR Language Gym",
+  "license": "MIT"
+}

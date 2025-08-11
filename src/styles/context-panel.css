@@ -1,0 +1,250 @@
+/* RLVR Context Panel - Matching Screenshot Design */
+
+#rlvr-context-panel {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    width: 320px;
+    height: 500px;
+    background: white;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    z-index: 2147483646;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    user-select: none;
+}
+
+.panel-header {
+    padding: 16px;
+    border-bottom: 1px solid #e1e5e9;
+    background: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+}
+
+.header-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.context-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.context-toggle label {
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.context-toggle input[type="checkbox"] {
+    margin: 0;
+    width: 14px;
+    height: 14px;
+}
+
+.subtitle-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px 0;
+    scroll-behavior: smooth;
+}
+
+.subtitle-entry {
+    padding: 8px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+    cursor: text;
+}
+
+.subtitle-entry:hover {
+    background-color: #f8f9fa;
+}
+
+.subtitle-entry.current {
+    background-color: #e3f2fd;
+    border-left: 3px solid #2196f3;
+}
+
+.timestamp {
+    font-size: 11px;
+    color: #888;
+    font-family: 'Monaco', 'Menlo', monospace;
+    margin-bottom: 4px;
+}
+
+.subtitle-text {
+    font-size: 14px;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin-bottom: 2px;
+    user-select: text;
+    cursor: text;
+}
+
+.subtitle-text::selection {
+    background-color: #3B82F6;
+    color: white;
+}
+
+.romaji {
+    font-size: 11px;
+    color: #666;
+    font-style: italic;
+    line-height: 1.3;
+}
+
+.panel-actions {
+    padding: 16px;
+    border-top: 1px solid #e1e5e9;
+    background: #f8f9fa;
+    display: flex;
+    gap: 8px;
+}
+
+.create-btn {
+    flex: 1;
+    padding: 10px 16px;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.create-btn:hover:not(:disabled) {
+    background: #e55a2e;
+    transform: translateY(-1px);
+}
+
+.create-btn:disabled {
+    background: #ccc;
+    color: #888;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.clear-btn {
+    padding: 10px 16px;
+    background: #f1f3f4;
+    color: #5f6368;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.clear-btn:hover {
+    background: #e8eaed;
+    border-color: #c4c7ca;
+}
+
+.panel-drag-handle {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    background: #666;
+    color: white;
+    font-size: 12px;
+    padding: 4px 2px;
+    border-radius: 3px 0 0 3px;
+    cursor: move;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    letter-spacing: -2px;
+}
+
+.panel-drag-handle:hover {
+    opacity: 1;
+}
+
+.loading-message {
+    padding: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+}
+
+/* Scrollbar styling */
+.subtitle-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.subtitle-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.subtitle-list::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.subtitle-list::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #rlvr-context-panel {
+        width: 280px;
+        right: 10px;
+        height: 400px;
+    }
+    
+    .panel-header {
+        padding: 12px;
+    }
+    
+    .panel-actions {
+        padding: 12px;
+    }
+}
+
+/* Animation for panel appearance */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#rlvr-context-panel {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Selection highlight animation */
+@keyframes highlightSelection {
+    0% { background-color: transparent; }
+    50% { background-color: rgba(59, 130, 246, 0.2); }
+    100% { background-color: transparent; }
+}
+
+.subtitle-text.selected {
+    animation: highlightSelection 0.8s ease-in-out;
+}

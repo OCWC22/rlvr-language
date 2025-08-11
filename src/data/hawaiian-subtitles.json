@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "title": "Hawaiian Language Content",
+    "source": "Apple TV",
+    "language_pair": "hawaiian-english",
+    "total_segments": 10
+  },
+  "subtitles": [
+    {
+      "id": 1,
+      "start_time": "21:38",
+      "end_time": "21:41",
+      "start_seconds": 1318,
+      "end_seconds": 1321,
+      "hawaiian": "I mea aha kou ki'i 'ana mai iā mākou?",
+      "english": "What do you want from us?",
+      "words": [
+        {"hawaiian": "I", "english": "what/which", "type": "question_word"},
+        {"hawaiian": "mea", "english": "thing", "type": "noun"},
+        {"hawaiian": "aha", "english": "what", "type": "question_word"},
+        {"hawaiian": "kou", "english": "your", "type": "possessive"},
+        {"hawaiian": "ki'i", "english": "image/picture", "type": "noun"},
+        {"hawaiian": "'ana", "english": "action/ing", "type": "particle"},
+        {"hawaiian": "mai", "english": "from/hither", "type": "directional"},
+        {"hawaiian": "iā", "english": "to/at", "type": "preposition"},
+        {"hawaiian": "mākou", "english": "us (exclusive)", "type": "pronoun"}
+      ]
+    },
+    {
+      "id": 2,
+      "start_time": "21:43",
+      "end_time": "21:44", 
+      "start_seconds": 1323,
+      "end_seconds": 1324,
+      "hawaiian": "Kū a'ela ka pu'u make no ke aupuni o mākou.",
+      "english": "The hill of death stands for our kingdom.",
+      "words": [
+        {"hawaiian": "Kū", "english": "stand/rise", "type": "verb"},
+        {"hawaiian": "a'ela", "english": "up/arose", "type": "directional"},
+        {"hawaiian": "ka", "english": "the", "type": "article"},
+        {"hawaiian": "pu'u", "english": "hill/mound", "type": "noun"},
+        {"hawaiian": "make", "english": "death", "type": "noun"},
+        {"hawaiian": "no", "english": "for/of", "type": "preposition"},
+        {"hawaiian": "ke", "english": "the", "type": "article"},
+        {"hawaiian": "aupuni", "english": "kingdom/nation", "type": "noun"},
+        {"hawaiian": "o", "english": "of", "type": "preposition"},
+        {"hawaiian": "mākou", "english": "us/our", "type": "pronoun"}
+      ]
+    },
+    {
+      "id": 3,
+      "start_time": "21:47",
+      "end_time": "21:49",
+      "start_seconds": 1327,
+      "end_seconds": 1329,
+      "hawaiian": "Wānana maila nā kāula o mākou",
+      "english": "Our prophets have prophesied",
+      "words": [
+        {"hawaiian": "Wānana", "english": "prophesy/predict", "type": "verb"},
+        {"hawaiian": "maila", "english": "came/did", "type": "directional"},
+        {"hawaiian": "nā", "english": "the (plural)", "type": "article"},
+        {"hawaiian": "kāula", "english": "prophets/seers", "type": "noun"},
+        {"hawaiian": "o", "english": "of", "type": "preposition"},
+        {"hawaiian": "mākou", "english": "us/our", "type": "pronoun"}
+      ]
+    },
+    {
+      "id": 4,
+      "start_time": "21:50", 
+      "end_time": "21:53",
+      "start_seconds": 1330,
+      "end_seconds": 1333,
+      "hawaiian": "i ka ho'okauā 'ia ihola o ko mākou po'e",
+      "english": "of the enslavement of our people",
+      "words": [
+        {"hawaiian": "i", "english": "in/at", "type": "preposition"},
+        {"hawaiian": "ka", "english": "the", "type": "article"},
+        {"hawaiian": "ho'okauā", "english": "enslave/subjugate", "type": "verb"},
+        {"hawaiian": "'ia", "english": "passive marker", "type": "particle"},
+        {"hawaiian": "ihola", "english": "indeed/now", "type": "intensifier"},
+        {"hawaiian": "o", "english": "of", "type": "preposition"},
+        {"hawaiian": "ko", "english": "our", "type": "possessive"},
+        {"hawaiian": "mākou", "english": "our", "type": "pronoun"},
+        {"hawaiian": "po'e", "english": "people/group", "type": "noun"}
+      ]
+    },
+    {
+      "id": 5,
+      "start_time": "21:54",
+      "end_time": "21:55",
+      "start_seconds": 1334,
+      "end_seconds": 1335,
+      "hawaiian": "ma lalo o ka noho ali'i o O'ahu.",
+      "english": "under the rule of O'ahu.",
+      "words": [
+        {"hawaiian": "ma", "english": "at/in", "type": "preposition"},
+        {"hawaiian": "lalo", "english": "under/beneath", "type": "location"},
+        {"hawaiian": "o", "english": "of", "type": "preposition"},
+        {"hawaiian": "ka", "english": "the", "type": "article"},
+        {"hawaiian": "noho", "english": "sit/rule/dwell", "type": "verb"},
+        {"hawaiian": "ali'i", "english": "chief/ruler/royalty", "type": "noun"},
+        {"hawaiian": "o", "english": "of", "type": "preposition"},
+        {"hawaiian": "O'ahu", "english": "O'ahu (island)", "type": "proper_noun"}
+      ]
+    },
+    {
+      "id": 6,
+      "start_time": "21:58",
+      "end_time": "22:03",
+      "start_seconds": 1338,
+      "end_seconds": 1343,
+      "hawaiian": "A wahi a nā kiu, pālua paha ko lākou pū'ali koa i ko mākou.",
+      "english": "And according to the spies, perhaps their warriors outnumber ours two-to-one.",
+      "words": [
+        {"hawaiian": "A", "english": "and", "type": "conjunction"},
+        {"hawaiian": "wahi", "english": "say/according to", "type": "verb"},
+        {"hawaiian": "a", "english": "of", "type": "preposition"},
+        {"hawaiian": "nā", "english": "the", "type": "article"},
+        {"hawaiian": "kiu", "english": "spies/scouts", "type": "noun"},
+        {"hawaiian": "pālua", "english": "double/twice", "type": "number"},
+        {"hawaiian": "paha", "english": "perhaps/maybe", "type": "qualifier"},
+        {"hawaiian": "ko", "english": "their", "type": "possessive"},
+        {"hawaiian": "lākou", "english": "they/their", "type": "pronoun"},
+        {"hawaiian": "pū'ali", "english": "group/band", "type": "noun"},
+        {"hawaiian": "koa", "english": "warriors/soldiers", "type": "noun"},
+        {"hawaiian": "i", "english": "to/than", "type": "preposition"},
+        {"hawaiian": "ko", "english": "our", "type": "possessive"},
+        {"hawaiian": "mākou", "english": "ours", "type": "pronoun"}
+      ]
+    },
+    {
+      "id": 7,
+      "start_time": "22:05",
+      "end_time": "22:08", 
+      "start_seconds": 1345,
+      "end_seconds": 1348,
+      "hawaiian": "No ke aha e holo mai ai ko O'ahu e kaua mai iā 'oukou?",
+      "english": "Why would O'ahu come to war against you?",
+      "words": [
+        {"hawaiian": "No", "english": "for/because of", "type": "preposition"},
+        {"hawaiian": "ke", "english": "the", "type": "article"},
+        {"hawaiian": "aha", "english": "what", "type": "question_word"},
+        {"hawaiian": "e", "english": "will/to", "type": "marker"},
+        {"hawaiian": "holo", "english": "run/travel/come", "type": "verb"},
+        {"hawaiian": "mai", "english": "hither/toward", "type": "directional"},
+        {"hawaiian": "ai", "english": "there", "type": "locative"},
+        {"hawaiian": "ko", "english": "those of", "type": "possessive"},
+        {"hawaiian": "O'ahu", "english": "O'ahu", "type": "proper_noun"},
+        {"hawaiian": "e", "english": "to", "type": "marker"},
+        {"hawaiian": "kaua", "english": "war/fight", "type": "verb"},
+        {"hawaiian": "mai", "english": "toward", "type": "directional"},
+        {"hawaiian": "iā", "english": "to/against", "type": "preposition"},
+        {"hawaiian": "'oukou", "english": "you (plural)", "type": "pronoun"}
+      ]
+    },
+    {
+      "id": 8,
+      "start_time": "22:10",
+      "end_time": "22:12",
+      "start_seconds": 1350,
+      "end_seconds": 1352,
+      "hawaiian": "He 'ōpio ka mō'ī, 'o Hahana.",
+      "english": "The king is young, Hahana.",
+      "words": [
+        {"hawaiian": "He", "english": "a/is", "type": "article"},
+        {"hawaiian": "'ōpio", "english": "young person/youth", "type": "noun"},
+        {"hawaiian": "ka", "english": "the", "type": "article"},
+        {"hawaiian": "mō'ī", "english": "king/monarch", "type": "noun"},
+        {"hawaiian": "'o", "english": "is/name marker", "type": "marker"},
+        {"hawaiian": "Hahana", "english": "Hahana (name)", "type": "proper_noun"}
+      ]
+    },
+    {
+      "id": 9,
+      "start_time": "22:13",
+      "end_time": "22:16",
+      "start_seconds": 1353,
+      "end_seconds": 1356,
+      "hawaiian": "Ua kūpa'a mau 'o ia ma hope o ka Mō'ī Kahekili.",
+      "english": "He has always stood behind King Kahekili.",
+      "words": [
+        {"hawaiian": "Ua", "english": "has/past marker", "type": "marker"},
+        {"hawaiian": "kūpa'a", "english": "stand firm/loyal", "type": "verb"},
+        {"hawaiian": "mau", "english": "always/continue", "type": "adverb"},
+        {"hawaiian": "'o", "english": "he", "type": "marker"},
+        {"hawaiian": "ia", "english": "he/him", "type": "pronoun"},
+        {"hawaiian": "ma", "english": "at/in", "type": "preposition"},
+        {"hawaiian": "hope", "english": "behind/after", "type": "location"},
+        {"hawaiian": "o", "english": "of", "type": "preposition"},
+        {"hawaiian": "ka", "english": "the", "type": "article"},
+        {"hawaiian": "Mō'ī", "english": "King", "type": "noun"},
+        {"hawaiian": "Kahekili", "english": "Kahekili (name)", "type": "proper_noun"}
+      ]
+    },
+    {
+      "id": 10,
+      "start_time": "22:17",
+      "end_time": "22:20",
+      "start_seconds": 1357,
+      "end_seconds": 1360,
+      "hawaiian": "A ua waiho wale akula ko Maui i ko ia ala aupuni.",
+      "english": "And Maui has left his kingdom behind.",
+      "words": [
+        {"hawaiian": "A", "english": "and", "type": "conjunction"},
+        {"hawaiian": "ua", "english": "has/past marker", "type": "marker"},
+        {"hawaiian": "waiho", "english": "leave/abandon", "type": "verb"},
+        {"hawaiian": "wale", "english": "only/just", "type": "qualifier"},
+        {"hawaiian": "akula", "english": "away/there", "type": "directional"},
+        {"hawaiian": "ko", "english": "those of", "type": "possessive"},
+        {"hawaiian": "Maui", "english": "Maui (island)", "type": "proper_noun"},
+        {"hawaiian": "i", "english": "object marker", "type": "marker"},
+        {"hawaiian": "ko", "english": "his", "type": "possessive"},
+        {"hawaiian": "ia", "english": "that", "type": "demonstrative"},
+        {"hawaiian": "ala", "english": "path/way", "type": "noun"},
+        {"hawaiian": "aupuni", "english": "kingdom/nation", "type": "noun"}
+      ]
+    }
+  ]
+}

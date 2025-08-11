@@ -1,0 +1,38 @@
+/* RLVR Language Gym - Subtitle Overlay Styles */
+
+#overlay-subs {
+  position: fixed;           /* we'll set exact px via JS to match video rect */
+  pointer-events: none;
+  z-index: 2147483647;       /* above player chrome */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 4%;
+  text-align: center;
+}
+
+#overlay-subs .line {
+  font-size: clamp(16px, 3.2vw, 34px);
+  line-height: 1.35;
+  color: #fff;
+  text-shadow: 0 0 3px #000, 0 0 6px #000;
+  background: rgba(0,0,0,0.25);
+  border-radius: 6px;
+  padding: .25em .5em;
+  margin-bottom: 3%;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* RLVR branding */
+#overlay-subs .line::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: #3B82F6;
+  border-radius: 50%;
+  opacity: 0.7;
+}
